@@ -348,3 +348,33 @@ body.dark .profile .toggle label::after {
 body.dark .profile .pp img {
     border: 4px solid #3477B4;
 }
+
+
+@media screen and (max-width: 380px) {
+    .profile .contact i {
+        position: relative;
+        color: #fff;
+        margin: 1rem .5rem;
+        border-radius: 50%;
+        background: #111c33;
+        font-size: 1.4rem;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        z-index: 999;
+        transition: .5s;
+    }
+    .profile .contact i::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #000000;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        z-index: -99;
+        transform: scale(0);
+        transition: .5s;
+    }
+}
