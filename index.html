@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harun Rewy Personal Website</title>
+    <title>Kişisel Web Sitem - Harun Rewy</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="src/css/style.css">
-    <link href="https://weaytest.glitch.me/img/logo.png" rel="shortcut icon"/>
     <link
         href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
@@ -38,20 +37,35 @@
                 </p>
             </div>
             <div class="contact">
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-discord"></i></a>
+                <a href="https://twitter.com/RewyFPS" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/haarunbtw/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a style="cursor: pointer;" class="ypn"><i class="fab fa-discord"></i></a>
             </div>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         $('.theme').click(function () {
             $('body').toggleClass("dark");
             return false;
         })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".ypn").click(function () {
+                swal.fire({
+                    icon: 'info',
+                    title: 'Discord',
+                    text: 'Rewy#6286',
+                    confirmButtonText: 'Kapat',
+                })
+            });
+        });
     </script>
 
 
