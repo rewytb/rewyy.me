@@ -200,4 +200,23 @@ body.dark .profile .pp img {
         transform: scale(0);
         transition: .5s;
     }
+    .profile .title h1 {
+        font-size: 1.2rem;
+    }
+    .profile .desc p {
+        font-size: .8rem;
+    }
+    .profile .pp img {
+        width: 125px;
+    }
+    .profile .toggle label {
+        width: 30px;
+        height: 30px;
+        background: #F4F4F4;
+        transition: .5s;
+        border-radius: 50%;
+    }
+    .profile .toggle label::after {
+        font-size: 1rem;
+    }
 }
