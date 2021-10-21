@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     transition: .5s;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .container {
