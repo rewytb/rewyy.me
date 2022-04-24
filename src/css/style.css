@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+    font-family: "Discord";
+    src: url("/src/fonts/UniSna.otf");
+    src: url("/src/fonts/UniSna.otf") format("woff"),
+    url("CustomFont.otf") format("opentype"),
+    url("CustomFont.svg#filename") format("svg");
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.card {
+    width: 700px;
+    height: 500px;
+    background-color: #18191c;
+    border-radius: 8px;
+    position: relative;
+}
+
+.banner {
+    background-color: #00f1ff;
+    width: 100%;
+    height: 140px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    border: 7px solid #18191c;
+    user-select: none;
+}
+
+
+.profile i {
+    position: absolute;
+    color: #faa81a;
+    transform: rotate(-120deg);
+    left: 120px;
+    top: 150px;
+    font-size: 1.4rem;
+    background-color: #18191c;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.nick h1 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.nick {
+    position: absolute;
+    top: 215px;
+    left: 25px;
+}
+
+.nick p {
+    color: #a2a4a7;
+    margin-top: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #a2a4a7;
+    top: 60%;
+}
+
+.about {
+    position: absolute;
+    left: 25px;
+    bottom: 135px;
+}
+
+.about h1 {
+    color: #b1b2b6;
+    font-weight: 700;
+    bottom: 20%;
+    font-size: 1rem;
+}
+
+.about p {
+    color: #fff;
+    font-weight: 700;
+    margin-top: .6rem;
+    font-size: 1rem;
+}
+
+.sm ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 40px;
+}
+
+.sm {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.sm ul li a{
+    color: #fff;
+}
+
+.sm ul li a i:nth-child(1) {
+    font-size: 1.4rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.sm ul li:nth-child(1) a i:nth-child(1) {
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.sm ul li:nth-child(2) a i:nth-child(1) {
+    background: #00acee;
+}
+
+.sm ul li:nth-child(3) a i:nth-child(1) {
+    background: #5865F2;
+}
+
+.sm ul li a i:nth-child(2) {
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 22px;
+    font-size: .8rem;
+    background-color: #84888d;
+}
