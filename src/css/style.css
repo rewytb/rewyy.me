@@ -12,13 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: linear-gradient(#fff, #6E6AFF);
-    transition: .3s;
-}
-
-body.dark {
-    background-image: linear-gradient(#1d2026, #000)!important;
-    transition: .3s;
+    background: linear-gradient(45deg, rgb(0, 0, 0), #1d2026);
 }
 
 .card {
@@ -201,29 +195,3 @@ body.dark {
   }
 
 }
-
-.theme {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    transform: rotate(230deg);
-}
-
-.theme i {
-    font-size: 1.4rem;
-    width: 35px;
-    height: 35px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #6E6AFF;
-    cursor: pointer;
-    transition: .3s;
-}
-
-.theme i:hover {
-    transform: scale(1.2);
-}
-
