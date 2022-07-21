@@ -85,7 +85,7 @@ span.job {
 
 .buttons a:first-child {
     background-color: #02899C;
-    color: #000;
+    color: #000000;
     border: 2px solid #02899C;
 }
 
@@ -176,11 +176,11 @@ span.job {
 
 .email input,
 textarea {
-    background-color: #222;
+    background-color: #222222;
     border: none;
     outline: none;
     resize: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 1.2em;
     width: 350px;
 }
@@ -202,7 +202,7 @@ textarea {
     border: none;
     outline: none;
     background-color: #02899C;
-    color: #fff;
+    color: #ffffff;
     padding: .4rem 2rem;
     border-radius: 5px;
     cursor: pointer;
@@ -220,4 +220,17 @@ textarea {
     color: red;
     font-size: 2em;
     cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    margin-top: -5rem;
+  }
+  .email {
+    top: 10%;
+    padding-top: 4rem;
+  }
+  .email .close {
+    right: 20px;
+  }
 }
