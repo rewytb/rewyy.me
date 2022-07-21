@@ -5,50 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d7dd6c36c4.js" crossorigin="anonymous"></script>
-    <title>Personal Website - Rewy</title>
-    <link rel="stylesheet" href="src/css/style.css">
-    <meta property="og:image"
-        content="https://cdn.glitch.global/6909a4a7-1365-4767-bfd4-e96939f9fc20/profile.png?v=1651092967825" />
-    <meta content="I am 16 years old. I'm coding websites with html and css. I am currently learning javascript."
-        property="og:description">
+    <title>Rewy - Our creativity for your success</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/47647802a6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
     <div class="card">
-        <div class="image">
-            <img src="src/img/profile-background.png" alt="">
-        </div>
         <div class="content">
-            <div class="details">
-                <h2>Harun Korkmaz<br><span>Web Designer</span></h2>
-                <div class="skills">
-                    <h3>My Skills</h3>
-                    <ul>
-                        <li>
-                            <i class="fa-brands fa-html5"></i>
-                            <span class="tooltip">HTML</span>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-css3-alt"></i>
-                            <span class="tooltip">CSS</span>
-                        </li>
-                        <li>
-                            <i class="fa-brands fa-js-square"></i>
-                            <span class="tooltip">Learning JS</span>
-                        </li>
-                    </ul>
+            <div class="up">
+                <div class="profile">
+                    <img src="./assets/img/profile.jpg" alt="">
                 </div>
-                <div class="contact">
-                    <h3>Contact</h3>
-                    <a href="https://instagram.com/rewyharun/" class="instagram" target="_blank"><i
-                            class="fa-brands fa-instagram"></i> Instagram</a>
-                    <a href="https://discord.com/users/852637529458868265" class="dc" target="_blank"><i
-                            class="fa-brands fa-discord"></i> Discord</a>
+                <div class="nameSide">
+                    <span class="name">Harun Korkmaz</span>
+                    <span class="nick">Rewy</span>
+                    <span class="job">Front-end Developer & User Interface Designer</span>
+
+                </div>
+                <div class="buttons">
+                    <a class="contact">Message</a>
+                    <a target="_blank" href="https://discord.com/users/852637529458868265">Discord</a>
+                </div>
+            </div>
+            <div class="down">
+                <div class="skillTitle">
+                    <h6>Skills</h6>
+                </div>
+                <div class="skills">
+                    <ul>
+                        <li>UI</li>
+                        <li>Front End Develeopment</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="email">
+        <div class="close">
+            <i class="fa-solid fa-xmark closeBtn"></i>
+        </div>
+        <form id="sendMail" onsubmit="emailSend(); reset(); return false;">
+            <div class="mailInput">
+                <div class="mailItem">
+                    <input type="text" name="name" id="formName" placeholder="Harry Potter" required>
+                    <span id="error"></span>
+                </div>
+                <div class="mailItem">
+                    <input type="email" name="mail" id="formMail" placeholder="hogwarts@gmail.com" required>
+                </div>
+            </div>
+            <div class="messageInput">
+                <textarea name="" id="formMessage" minlength="30" rows="10" placeholder="Enter your message" required></textarea>
+            </div>
+            <div class="send">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
+        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".contact").click(function () {
+                $(".email").toggleClass("show");
+            });
+        });
+
+        $(document).ready(function () {
+            $(".closeBtn").click(function () {
+                $(".email").toggleClass("show");
+            });
+        });
+
+
+        function emailSend() {
+            Email.send({
+                SecureToken: "cf0fbe3f-878c-4b90-829d-33d08020eb35",
+                To: 'widdedcmp@gmail.com',
+                From: "harunrewy@gmail.com",
+                Subject: `New message from: ${document.getElementById("formName").value}`,
+                Body: `Name: <br>${document.getElementById("formName").value}<br><br>Message: <br>${document.getElementById("formMessage").value}<br><br>E-Mail: <br>${document.getElementById("formMail").value}`
+            }).then(
+                message => swal({
+                    title: "Successful",
+                    text: "Your message has been received. I will contact you as soon as possible.",
+                    icon: "success",
+                    button: "Close",
+                })
+            );
+        }
+    </script>
+
 </body>
 
 </html>
